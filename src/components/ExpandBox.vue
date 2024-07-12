@@ -5,7 +5,7 @@ const showContent = ref(false)
 
 <template>
   <div>
-    <button @click="showContent = ">mostrar</button>
+    <button @click="showContent = !showContent">mostrar</button>
     <div v-if="showContent" class="expand-box">Aqui vai um texto escondido</div>
   </div>
 </template>
