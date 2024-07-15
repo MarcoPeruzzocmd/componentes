@@ -1,12 +1,15 @@
 <script setup>
 import { ref } from 'vue'
+const props = defineProps([`title`])
 const showContent = ref(false)
 </script>
 
 <template>
   <div>
     <button @click="showContent = !showContent">mostrar</button>
-    <div v-if="showContent" class="expand-box">Aqui vai um texto escondido</div>
+    <div v-if="showContent" class="expand-box">
+    <h1>{{ props.title }}</h1>
+  </div>
   </div>
 </template>
 
